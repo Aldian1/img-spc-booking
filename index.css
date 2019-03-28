@@ -1,0 +1,70 @@
+.blue-box, .white-box-blue-sidebar {
+  color: white;
+  font-family: Helvetica;
+  font-size: 18px;
+  width: 670px;
+  height: 510px;
+  padding: 45px 100px;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .blue-box .content-container, .white-box-blue-sidebar .content-container {
+    margin: 0 auto;
+    width: 300px; }
+  .blue-box h2, .blue-box label, .blue-box select, .blue-box input, .blue-box .primary-btn, .white-box-blue-sidebar h2, .white-box-blue-sidebar label, .white-box-blue-sidebar select, .white-box-blue-sidebar input, .white-box-blue-sidebar .primary-btn {
+    display: block;
+    margin: 20px 0;
+    font-weight: normal; }
+  .blue-box select, .blue-box input, .blue-box .primary-btn, .white-box-blue-sidebar select, .white-box-blue-sidebar input, .white-box-blue-sidebar .primary-btn {
+    width: 240px; }
+  .blue-box select, .blue-box input, .white-box-blue-sidebar select, .white-box-blue-sidebar input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 14px; }
+  .blue-box h2, .white-box-blue-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 45px; }
+  .blue-box label::before, .white-box-blue-sidebar label::before {
+    content: '* ';
+    color: red; }
+  .blue-box select, .white-box-blue-sidebar select {
+    background-color: transparent;
+    color: white; }
+  .blue-box .primary-btn, .white-box-blue-sidebar .primary-btn {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    padding: 20px; }
+  .blue-box .practitioner-grid, .white-box-blue-sidebar .practitioner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .blue-box .practitioner-grid .practitioner img, .white-box-blue-sidebar .practitioner-grid .practitioner img {
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 100px;
+      min-width: 120px;
+      min-height: 120px;
+      width: 120px;
+      height: 120px; }
+    .blue-box .practitioner-grid .practitioner span, .white-box-blue-sidebar .practitioner-grid .practitioner span {
+      display: block;
+      text-align: center;
+      font-size: 13px; }
+    .blue-box .practitioner-grid .practitioner span + span, .white-box-blue-sidebar .practitioner-grid .practitioner span + span {
+      font-size: 11px;
+      margin-bottom: 30px; }
+
+.blue-box {
+  background-image: linear-gradient(to bottom right, #59ABD2, #75C7D8); }
+
+.white-box-blue-sidebar {
+  background-color: white;
+  color: black; }
+  .white-box-blue-sidebar input {
+    border-color: #9F9F9F; }
+
+/*# sourceMappingURL=index.css.map */

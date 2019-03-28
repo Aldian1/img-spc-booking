@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appt booking</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<div class="blue-box">
+    <div class="content-container">
+        <h2>Please select a treatment</h2>
+
+        <label for="treatment">Treatment</label>
+        <select name="treatment" id="treatment">
+            <option value="0">Sports massage (60 mins)</option>
+            <option value="1">Non-sports massage (non-60 mins)</option>
+        </select>
+
+        <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="0">Any</option>
+            <option value="1">Not any</option>
+        </select>
+
+        <button class="primary-btn">Confirm Details</button>
+    </div>
+</div>
+
+<div class="white-box-blue-sidebar">
+    <h2>Please select a practitioner</h2>
+
+    <div class="practitioner-grid">
+        <div class="practitioner">
+            <img src="img/nicole_crewe.png" alt="Your face">
+            <span>Nicole Crewe</span>
+            <span>Physiotherapist</span>
+        </div>
+        <div class="practitioner">
+            <img src="img/meg_borah.png" alt="Your face">
+            <span>Meg Borah</span>
+            <span>Physiotherapist</span>
+        </div>
+        <div class="practitioner">
+            <img src="img/kamil_simpson.png" alt="Your face">
+            <span>Kamil Simpson</span>
+            <span>Physiotherapist</span>
+        </div>
+        <div class="practitioner">
+            <img src="img/stuart_sievwright.png" alt="Your face">
+            <span>Stuart Sievwright</span>
+            <span>Physiotherapist & Massage Therapist</span>
+        </div>
+        <div class="practitioner">
+            <img src="img/abbie_parsons.png" alt="Your face">
+            <span>Abbie Parsons</span>
+            <span>Massage Therapist</span>
+        </div>
+        <div class="practitioner">
+            <img src="img/lukasz_biegaj.png" alt="Your face">
+            <span>Lukasz Biegaj</span>
+            <span>Massage Therapist</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Design simple calendar tool?? Or scape from existing one ;/////// -->
+<div class="blue-box">
+    <h2>Pick and date & time</h2>
+    <div class="date-selector">
+
+    </div>
+    <span>Select a date to view available times</span>
+    <div class="times-btn-group">
+
+    </div>
+
+    <button class="primary-btn">Confirm Selection</button>
+</div>
+
+<div class="white-box-blue-sidebar">
+    <label for="first_name">First Name</label>
+    <input type="text" id="first_name"/>
+    
+    <label for="last_name">Surname</label>
+    <input type="text" id="last_name" />
+    
+    <label for="phone">Phone number</label>
+    <input type="tel" id="phone" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" />
+
+    <label for="message">Additional message</label>
+    <input type="text" id="message" />
+
+    <button class="primary-btn">Confirm Details</button>
+</div>
+
+<div class="blue-box">
+    <h2>Massage type</h2>
+    <h2>Location</h2>
+    <span>Please confirm your booking 19:04</span>
+
+    <hr/>
+
+    <h4>Practitioner</h4>
+    <img src="persons_face_small.png" alt="small face">
+    <h4>Date:</h4>
+    <span>25 March 2019</span>
+    <h4>Time:</h4>
+    <span>10:00am - 11:00am</span>
+
+    <hr/>
+
+    <h4>You</h4>
+    <span>Robert Merriman<br />22/02/1997</span>
+    <h4>Email:</h4>
+    <span>robertbmerriman@gmail.com</span>
+    <h4>Your number:</h4>
+    <span>07807880570</span>
+
+    <button class="primary-btn">Book Appointment</button>
+</div>
+
+
+<div class="blue-box">
+    <img src="big_tick.png" alt="A big tick">
+    <h2>Booking Confirmed</h2>
+    <button class="primary-btn">Book another appointment</button>
+</div>
+
+</body>
+</html>
