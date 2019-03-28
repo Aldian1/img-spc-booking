@@ -9,19 +9,19 @@ $mid_grey: #9F9F9F;
   padding: 45px 100px;
   box-sizing: border-box;
   overflow: hidden; // TODO Remove
+  display: inline-block;
 
   .content-container {
     margin: 0 auto;
     width: 300px;
   }
 
-  h2, label, select, input, .primary-btn {
+  label, select, input, .primary-btn {
     display: block;
     margin: 20px 0;
-    font-weight: normal;
   }
 
-  select, input, .primary-btn {
+  select, .primary-btn {
     width: 240px;
   }
 
@@ -36,8 +36,10 @@ $mid_grey: #9F9F9F;
   }
 
   h2 {
+    font-weight: normal;
     font-size: 24px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
 
   label {
@@ -50,10 +52,12 @@ $mid_grey: #9F9F9F;
   select {
     background-color: transparent;
     color: white;
+    margin-bottom: 40px;
   }
 
   input {
-
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .primary-btn {
@@ -61,7 +65,7 @@ $mid_grey: #9F9F9F;
     background-color: white;
     color: black;
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
   }
 
   .practitioner-grid {
@@ -69,14 +73,23 @@ $mid_grey: #9F9F9F;
     grid-template-columns: repeat(3, 1fr);
 
     .practitioner {
+      &:hover {
+        img {
+          border: 3px #59ABD2 solid; // TODO
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+
       img {
+        border: 3px transparent solid;
         display: block;
-        margin: 0 auto 10px;
         border-radius: 100px;
         min-width: 120px;
         min-height: 120px;
         width: 120px;
         height: 120px;
+        margin: 10px auto;
       }
       span {
         display: block;
@@ -85,7 +98,41 @@ $mid_grey: #9F9F9F;
       }
       span + span {
         font-size: 11px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .detail-item {
+      padding-right: 20px;
+      &.long {
+        grid-column-end: span 2;
+      }
+    }
+  }
+
+  .confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .confirmation-item {
+      padding-right: 20px;
+      border-top: 2px white solid;
+      border-bottom: 2px white solid;
+      border-collapse: collapse;
+      h4 {
+        margin: 20px 0 10px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      span {
+        font-size: 12px;
       }
     }
   }
@@ -93,13 +140,32 @@ $mid_grey: #9F9F9F;
 
 .blue-box {
   background-image: linear-gradient(to bottom right, #59ABD2, #75C7D8);
+
+  &.confirmed {
+    text-align: center;
+
+    img {
+      margin: 50px;
+    }
+
+    button {
+      display: inline;
+      width: unset;
+    }
+  }
 }
 
 .white-box-blue-sidebar {
   background-color: white;
   color: black;
 
+  label, .primary-btn {
+    margin: 0 0 15px;
+    font-size: 16px;
+  }
+
   input {
+    margin: 0 0 20px;
     border-color: $mid_grey;
   }
 

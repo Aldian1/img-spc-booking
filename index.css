@@ -6,15 +6,15 @@
   height: 510px;
   padding: 45px 100px;
   box-sizing: border-box;
-  overflow: hidden; }
+  overflow: hidden;
+  display: inline-block; }
   .blue-box .content-container, .white-box-blue-sidebar .content-container {
     margin: 0 auto;
     width: 300px; }
-  .blue-box h2, .blue-box label, .blue-box select, .blue-box input, .blue-box .primary-btn, .white-box-blue-sidebar h2, .white-box-blue-sidebar label, .white-box-blue-sidebar select, .white-box-blue-sidebar input, .white-box-blue-sidebar .primary-btn {
+  .blue-box label, .blue-box select, .blue-box input, .blue-box .primary-btn, .white-box-blue-sidebar label, .white-box-blue-sidebar select, .white-box-blue-sidebar input, .white-box-blue-sidebar .primary-btn {
     display: block;
-    margin: 20px 0;
-    font-weight: normal; }
-  .blue-box select, .blue-box input, .blue-box .primary-btn, .white-box-blue-sidebar select, .white-box-blue-sidebar input, .white-box-blue-sidebar .primary-btn {
+    margin: 20px 0; }
+  .blue-box select, .blue-box .primary-btn, .white-box-blue-sidebar select, .white-box-blue-sidebar .primary-btn {
     width: 240px; }
   .blue-box select, .blue-box input, .white-box-blue-sidebar select, .white-box-blue-sidebar input {
     -webkit-appearance: none;
@@ -25,46 +25,90 @@
     padding: 20px;
     font-size: 14px; }
   .blue-box h2, .white-box-blue-sidebar h2 {
+    font-weight: normal;
     font-size: 24px;
-    margin-bottom: 45px; }
+    margin-bottom: 30px;
+    margin-top: 0; }
   .blue-box label::before, .white-box-blue-sidebar label::before {
     content: '* ';
     color: red; }
   .blue-box select, .white-box-blue-sidebar select {
     background-color: transparent;
-    color: white; }
+    color: white;
+    margin-bottom: 40px; }
+  .blue-box input, .white-box-blue-sidebar input {
+    box-sizing: border-box;
+    width: 100%; }
   .blue-box .primary-btn, .white-box-blue-sidebar .primary-btn {
     border-radius: 20px;
     background-color: white;
     color: black;
     font-size: 18px;
-    padding: 20px; }
+    padding: 15px; }
   .blue-box .practitioner-grid, .white-box-blue-sidebar .practitioner-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
+    .blue-box .practitioner-grid .practitioner:hover img, .white-box-blue-sidebar .practitioner-grid .practitioner:hover img {
+      border: 3px #59ABD2 solid;
+      margin-top: 0;
+      margin-bottom: 20px; }
     .blue-box .practitioner-grid .practitioner img, .white-box-blue-sidebar .practitioner-grid .practitioner img {
+      border: 3px transparent solid;
       display: block;
-      margin: 0 auto 10px;
       border-radius: 100px;
       min-width: 120px;
       min-height: 120px;
       width: 120px;
-      height: 120px; }
+      height: 120px;
+      margin: 10px auto; }
     .blue-box .practitioner-grid .practitioner span, .white-box-blue-sidebar .practitioner-grid .practitioner span {
       display: block;
       text-align: center;
       font-size: 13px; }
     .blue-box .practitioner-grid .practitioner span + span, .white-box-blue-sidebar .practitioner-grid .practitioner span + span {
       font-size: 11px;
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
+  .blue-box .details-grid, .white-box-blue-sidebar .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .blue-box .details-grid .detail-item, .white-box-blue-sidebar .details-grid .detail-item {
+      padding-right: 20px; }
+      .blue-box .details-grid .detail-item.long, .white-box-blue-sidebar .details-grid .detail-item.long {
+        grid-column-end: span 2; }
+  .blue-box .confirmation-grid, .white-box-blue-sidebar .confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .blue-box .confirmation-grid .confirmation-item, .white-box-blue-sidebar .confirmation-grid .confirmation-item {
+      padding-right: 20px;
+      border-top: 2px white solid;
+      border-bottom: 2px white solid;
+      border-collapse: collapse; }
+      .blue-box .confirmation-grid .confirmation-item h4, .white-box-blue-sidebar .confirmation-grid .confirmation-item h4 {
+        margin: 20px 0 10px; }
+      .blue-box .confirmation-grid .confirmation-item img, .white-box-blue-sidebar .confirmation-grid .confirmation-item img {
+        width: 40px;
+        height: 40px; }
+      .blue-box .confirmation-grid .confirmation-item span, .white-box-blue-sidebar .confirmation-grid .confirmation-item span {
+        font-size: 12px; }
 
 .blue-box {
   background-image: linear-gradient(to bottom right, #59ABD2, #75C7D8); }
+  .blue-box.confirmed {
+    text-align: center; }
+    .blue-box.confirmed img {
+      margin: 50px; }
+    .blue-box.confirmed button {
+      display: inline;
+      width: unset; }
 
 .white-box-blue-sidebar {
   background-color: white;
   color: black; }
+  .white-box-blue-sidebar label, .white-box-blue-sidebar .primary-btn {
+    margin: 0 0 15px;
+    font-size: 16px; }
   .white-box-blue-sidebar input {
+    margin: 0 0 20px;
     border-color: #9F9F9F; }
 
 /*# sourceMappingURL=index.css.map */
