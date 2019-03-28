@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="blue-box">
+<div id="page-1" class="blue-box show">
     <div class="content-container">
         <h2>Please select a treatment</h2>
 
@@ -23,11 +23,12 @@
             <option value="1">Not any</option>
         </select>
 
-        <button class="primary-btn">Confirm Details</button>
+        <button id="confirm-1" class="primary-btn">Confirm Details</button>
     </div>
 </div>
 
-<div class="white-box-blue-sidebar">
+<div id="page-2" class="white-box-blue-sidebar">
+    <div id="back-arrow-2" class="back-arrow"></div>
     <h2>Please select a practitioner</h2>
 
     <div class="practitioner-grid">
@@ -66,20 +67,36 @@
 
 
 <!-- Design simple calendar tool?? Or scape from existing one ;/////// -->
-<div class="blue-box">
+<div id="page-3" class="blue-box">
+    <div id="back-arrow-3" class="back-arrow"></div>
     <h2>Pick and date & time</h2>
     <div class="date-selector">
+        <div class="title-container">
+            <img src="img/left_arrow.png" />
+            <div>March 2019</div>
+            <img src="img/right_arrow.png" />
+        </div>
 
+        <div id="calendar-grid" class="calendar-grid">
+            <div class="calendar-day">M</div>
+            <div class="calendar-day">T</div>
+            <div class="calendar-day">W</div>
+            <div class="calendar-day">T</div>
+            <div class="calendar-day">F</div>
+            <div class="calendar-day">S</div>
+            <div class="calendar-day">S</div>
+        </div>
     </div>
-    <span>Select a date to view available times</span>
+    <!--<span>Select a date to view available times</span>-->
     <div class="times-btn-group">
 
     </div>
 
-    <button class="primary-btn">Confirm Selection</button>
+    <button id="confirm-3" class="primary-btn">Confirm Selection</button>
 </div>
 
-<div class="white-box-blue-sidebar">
+<div id="page-4" class="white-box-blue-sidebar">
+    <div id="back-arrow-4" class="back-arrow"></div>
     <h2>Please enter your details</h2>
 
     <div class="details-grid">
@@ -105,50 +122,55 @@
         </div>
     </div>
 
-    <button class="primary-btn">Confirm Details</button>
+    <button id="confirm-4" class="primary-btn">Confirm Details</button>
 </div>
 
-<div class="blue-box">
-    <h2>Sports Massage (60 minutes)<br />Fishponds (BS16 2EA)</h2>
-    <span>Please confirm your booking 19:04</span>
+<div id="page-5" class="blue-box">
+    <div id="back-arrow-5" class="back-arrow"></div>
+    <div class="header-container">
+        <h2>Sports Massage (60 minutes)<br />Fishponds (BS16 2EA)</h2>
+        <span>Please confirm your booking 19:04</span>
+    </div>
 
     <div class="confirmation-grid">
         <div class="confirmation-item">
-            <h4>Practitioner</h4>
+            <div>Practitioner</div>
             <img src="img/nicole_crewe.png" alt="small face">
-            <span>Nicole</span>
+            <div>Nicole</div>
         </div>
         <div class="confirmation-item">
-            <h4>Date:</h4>
-            <span>25 March 2019</span>
+            <div>Date:</div>
+            <div>25 March 2019</div>
         </div>
         <div class="confirmation-item">
-            <h4>Time:</h4>
-            <span>10:00am - 11:00am</span>
+            <div>Time:</div>
+            <div>10:00am - 11:00am</div>
         </div>
         <div class="confirmation-item">
-            <h4>You</h4>
-            <span>Robert Merriman<br />22/02/1997</span>
+            <div>You</div>
+            <div>Robert Merriman<br />22/02/1997</div>
         </div>
         <div class="confirmation-item">
-            <h4>Email:</h4>
-            <span>robertbmerriman@gmail.com</span>
+            <div>Email:</div>
+            <div>robertbmerriman@gmail.com</div>
         </div>
         <div class="confirmation-item">
-            <h4>Your number:</h4>
-            <span>07807880570</span>
+            <div>Your number:</div>
+            <div>07807880570</div>
         </div>
     </div>
 
-    <button class="primary-btn">Book Appointment</button>
+    <button id="confirm-5" class="primary-btn">Book Appointment</button>
 </div>
 
 
-<div class="blue-box confirmed">
+<div id="page-6" class="blue-box confirmed">
     <img src="img/big_tick.png" alt="A big tick">
     <h2>Booking Confirmed</h2>
-    <button class="primary-btn">Book another appointment</button>
+    <button id="confirm-6" class="primary-btn">Book another appointment</button>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
