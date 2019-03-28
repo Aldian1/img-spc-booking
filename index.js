@@ -59,6 +59,7 @@ $(() => {
       $calendarGrid.append($(`<div class="calendar-day">${i}</div>`))
     }
 
+    $calendarGrid.children().eq(7).css("grid-column-start", `${offset}`)
   }
 
   setupCalendar(30, 4)

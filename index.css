@@ -79,7 +79,8 @@
     .blue-box .practitioner-grid .practitioner:hover img, .white-box-blue-sidebar .practitioner-grid .practitioner:hover img {
       border: 3px #59ABD2 solid;
       margin-top: 0;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      transition: margin-top 300ms ease-out, margin-bottom 300ms ease-out; }
     .blue-box .practitioner-grid .practitioner img, .white-box-blue-sidebar .practitioner-grid .practitioner img {
       border: 3px transparent solid;
       display: block;
@@ -88,7 +89,8 @@
       min-height: 120px;
       width: 120px;
       height: 120px;
-      margin: 10px auto; }
+      margin: 10px auto;
+      transition: margin-top 300ms ease-out, margin-bottom 300ms ease-out; }
     .blue-box .practitioner-grid .practitioner span, .white-box-blue-sidebar .practitioner-grid .practitioner span {
       display: block;
       text-align: center;

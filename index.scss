@@ -122,6 +122,8 @@ $mid_grey: #9F9F9F;
           border: 3px $blue1 solid; // TODO
           margin-top: 0;
           margin-bottom: 20px;
+
+          transition: margin-top 300ms ease-out, margin-bottom 300ms ease-out;
         }
       }
 
@@ -134,6 +136,7 @@ $mid_grey: #9F9F9F;
         width: 120px;
         height: 120px;
         margin: 10px auto;
+        transition: margin-top 300ms ease-out, margin-bottom 300ms ease-out;
       }
       span {
         display: block;
