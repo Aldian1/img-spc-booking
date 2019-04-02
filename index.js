@@ -62,7 +62,11 @@ function setupCalendar (days, offset) {
   const $calendarGrid = $('#calendar-grid')
 
   for (let i = 1; i <= days; i++) {
-    $calendarGrid.append($(`<div class="calendar-day"><div class="calendar-date">${i}</div></div>`))
+    $calendarGrid.append($(`<div class="calendar-day"><div id="date-${i}" class="calendar-date">${i}</div></div>`))
+    $(`#date-${i}`).on('click', function() {
+      // $(this).css('background-color', '#45a1cd')
+      // RADIO BUTTONS
+    })
   }
 
   $calendarGrid.children().eq(7).css("grid-column-start", `${offset}`)
