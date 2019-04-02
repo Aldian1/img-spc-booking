@@ -3,6 +3,13 @@ $blue2: #75C7D8;
 $light_grey: #F3F3F3;
 $mid_grey: #9F9F9F;
 
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 .blue-box, .white-box-blue-sidebar {
   position: relative;
   color: white;
@@ -12,11 +19,21 @@ $mid_grey: #9F9F9F;
   height: 510px;
   padding: 45px 70px;
   box-sizing: border-box;
-  overflow: hidden; // TODO Remove
+  overflow: hidden; // TODO REMOVE
   display: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 50px auto 0;
+
+  // TODO REMOVE
+  &#page-1 {
+    h2 {
+      text-align: left;
+    }
+  }
 
   &.show {
-    display: inline-block;
+    display: block;
   }
 
   .back-arrow {
@@ -64,15 +81,19 @@ $mid_grey: #9F9F9F;
 
   .header-container {
     position: relative;
-    margin-bottom: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+
     h2 {
       margin: 0;
+      text-align: left;
     }
     h2 + span {
       font-size: 12px;
       position: absolute;
       right: 0;
       bottom: 0;
+      line-height: 32px;
     }
   }
 
@@ -81,6 +102,7 @@ $mid_grey: #9F9F9F;
     font-size: 24px;
     margin-bottom: 30px;
     margin-top: 0;
+    text-align: center;
   }
 
   label {
@@ -91,9 +113,14 @@ $mid_grey: #9F9F9F;
   }
 
   select {
-    background-color: transparent;
     color: white;
     margin-bottom: 40px;
+    background: transparent url("img/down_arrow.png") no-repeat 94%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 40px;
+
     &:hover {
       border-color: darken($blue1, 10%);
     }
@@ -110,6 +137,7 @@ $mid_grey: #9F9F9F;
     color: black;
     font-size: 18px;
     padding: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .practitioner-grid {
@@ -117,7 +145,7 @@ $mid_grey: #9F9F9F;
     grid-template-columns: repeat(3, 1fr);
 
     .practitioner {
-      &:hover {
+      &:hover, &:active {
         img {
           border: 3px $blue1 solid; // TODO
           margin-top: 0;
@@ -152,6 +180,7 @@ $mid_grey: #9F9F9F;
 
   .title-container {
     text-align: center;
+    margin-bottom: 30px;
 
     img {
       margin: 0 20px;
@@ -166,9 +195,19 @@ $mid_grey: #9F9F9F;
   .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    text-align: center;
 
     .calendar-day {
-      padding: 15px;
+      .calendar-date {
+        width: 40px;
+        height: 40px;
+        margin: 2.5px auto;
+        line-height: 40px;
+        &:hover {
+          border-radius: 50%;
+          background-color: $blue1;
+        }
+      }
     }
   }
 
@@ -220,8 +259,6 @@ $mid_grey: #9F9F9F;
 }
 
 .blue-box {
-  background-image: linear-gradient(to bottom right, $blue1, $blue2);
-
   &.confirmed {
     text-align: center;
 
@@ -233,6 +270,30 @@ $mid_grey: #9F9F9F;
       display: inline;
       width: unset;
     }
+  }
+
+  &:before {
+    content: "";
+    background-image: linear-gradient(to bottom right, $blue1, $blue2);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+  }
+
+  &:after {
+    content: "";
+    background-image: url("img/morphing_diamonds.png");
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: 30px;
   }
 }
 

@@ -52,16 +52,24 @@ $(() => {
     })
   })
 
-  function setupCalendar (days, offset) {
-    const $calendarGrid = $('#calendar-grid')
-
-    for (let i = 1; i <= days; i++) {
-      $calendarGrid.append($(`<div class="calendar-day">${i}</div>`))
-    }
-
-    $calendarGrid.children().eq(7).css("grid-column-start", `${offset}`)
-  }
-
   setupCalendar(30, 4)
 
+  reAddOutlineOnMouseMove()
+
 })
+
+function setupCalendar (days, offset) {
+  const $calendarGrid = $('#calendar-grid')
+
+  for (let i = 1; i <= days; i++) {
+    $calendarGrid.append($(`<div class="calendar-day"><div class="calendar-date">${i}</div></div>`))
+  }
+
+  $calendarGrid.children().eq(7).css("grid-column-start", `${offset}`)
+}
+
+function reAddOutlineOnMouseMove () {
+  window.addEventListener('mousemove', () => {
+    $("body").removeClass('user-is-tabbing')
+  })
+}
